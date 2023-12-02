@@ -22,9 +22,7 @@ function getPowerOfGame(gameData) {
     }
   }
 
-  const power = Object.values(cubeTable).reduce((acc, val) => acc *= val, 1);
-
-  return power;
+  return Object.values(cubeTable).reduce((acc, val) => acc *= val, 1);
 }
 
 let line;
