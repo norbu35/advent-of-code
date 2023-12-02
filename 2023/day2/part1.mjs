@@ -39,8 +39,7 @@ let result = 0;
 let line;
 
 while ((line = readLine()) !== undefined) {
-  const value = checkGame(line);
-  result += value;
+  result += checkGame(line);
 }
 
 console.log(result);
