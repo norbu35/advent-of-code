@@ -32,11 +32,7 @@ function checkGame(gameData) {
     }
   }
 
-  if (valid) {
-    return parseInt(gameId);
-  } else {
-    return 0;
-  }
+  return valid ? parseInt(gameId) : 0;
 }
 
 let result = 0;
