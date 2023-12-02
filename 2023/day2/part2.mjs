@@ -8,7 +8,6 @@ function getPowerOfGame(gameData) {
     return 0;
   }
 
-  const gameId = gameData.split(":")[0].split(" ")[1];
   const dataBody = gameData.split(":")[1].trim();
   const sets = dataBody.split(";").map((el) => el.trim());
   const cubeTable = {};
