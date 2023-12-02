@@ -13,9 +13,9 @@ function fileReader(path, encoding) {
   return fileData;
 }
 
-function lineReader(fileData, seperator) {
+function lineReader(fileData, separator) {
   let lineIdx = 0;
-  const lines = fileData.split(seperator);
+  const lines = fileData.split(separator);
 
   return function () {
     const line = lines[lineIdx];
