@@ -20,17 +20,16 @@ function createMatrix() {
 function checkAdjacent(start, end, y) {
   const symbolRegex = /[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]/;
 
-  if (
-    y === 0 || end === matrix[0].length - 1 || y === matrix.length - 1 ||
-    start === 0
-  ) {
-    return false;
-  }
-
-  for (let i = start - 1; i <= end; i++) {
-    for (let j = y - 1; j <= y + 1; j += 2) {
-      if (symbolRegex.test(matrix[j][i])) {
-        return true;
+  if (y === 0) {
+  } else if (end === 139) { // right edge
+  } else if (y === 139) { // bottom edge
+  } else if (start === 0) { //left edge
+  } else {
+    for (let i = start - 1; i <= end; i++) {
+      for (let j = y - 1; j <= y; j += 2) {
+        if (symbolRegex.test(matrix[j][i])) {
+          return true;
+        }
       }
     }
   }
