@@ -63,9 +63,7 @@ for (const [y, row] of matrix.entries()) {
     } else {
       end = x - 1;
       if (consecutive) {
-        if (checkAdjacent(start, end, y)) {
-          sum += parseInt(number);
-        }
+        sum += checkAdjacent(start, end, y) ? number : 0;
         consecutive = false;
       }
       number = "";
