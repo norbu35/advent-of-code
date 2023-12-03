@@ -32,6 +32,13 @@ function checkAdjacent(start, end, y) {
         }
       }
     }
+
+    if (
+      symbolRegex.test(matrix[y][start - 1]) ||
+      symbolRegex.test(matrix[y][start + 1])
+    ) {
+      return true;
+    }
   }
 
   return false;
